@@ -10,10 +10,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $^ -o $@
 
-%.o: %.cpp
-	$(CC) -c $< -o $@
-	
-Server.o: Server.cpp
+%.o: %.cpp %.hpp
 	$(CC) -c $< -o $@
 
 clean:
