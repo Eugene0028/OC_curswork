@@ -10,6 +10,7 @@
 #include <unistd.h>
 #include <cstdlib>
 #include <pwd.h>
+#include <cstring>
 class TaskManager
 {
 private:
