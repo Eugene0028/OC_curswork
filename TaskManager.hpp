@@ -56,7 +56,7 @@ private:
                                 uid_t uid = stoi(uidd);
                                 struct passwd *pw = getpwuid(uid);
                                 processInfo.user = uid;
-                                if (pw != NULL && strlen(pw->pw_name) < 11) 
+                                if (pw != NULL && strlen(pw->pw_name) < 7) 
                                 {
                                     processInfo.user = pw->pw_name;
                                 }
