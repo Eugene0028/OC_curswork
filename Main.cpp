@@ -49,10 +49,6 @@ int main()
                 printf("Bye!\n");
                 return 0;
             }
-            case 6:
-            {
-
-            }
             default:
             {
                 tm->clear();
