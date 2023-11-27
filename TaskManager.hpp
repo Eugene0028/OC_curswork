@@ -55,9 +55,11 @@ private:
                                 uid_t uid = stoi(uidd);
                                 struct passwd *pw = getpwuid(uid);
                                 processInfo.user = uid;
-                                if (pw != NULL) {
+                                if (pw != NULL && strlen(pw->pw_name) < 11) 
+                                {
                                     processInfo.user = pw->pw_name;
                                 }
+                                else processInfo.user = "root";
                             }
                             else if (key == "Name") {
                                 processInfo.command = value;
